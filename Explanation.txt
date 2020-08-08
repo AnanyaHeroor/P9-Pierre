@@ -1,0 +1,16 @@
+This order function uses variables and for loops to store the best minimum elements for the corresponding indices so that it can order an array from smallest element to largest element (array length is less than 100000). It will order an array of said length in less than a minute.
+
+function order: (int[] pages):
+
+loop through the indices (i) starting at 0 and store best minimum element under min_i
+loop through next set (j) of comparable indices starting at i+1 
+	if pages[j] < pages[min_i]:
+	new best minimum (min_i) = j (keep updating the best minimum for whatever index the loop is at)
+
+
+if new best minimum != i:
+new array = pages [i]
+reassign pages[min_i] with pages[i]
+reassign temp with pages [min_i]
+
+This function loops through by comparing two indices at a time to determine the most minimum element to be assigned at each index. Two variables are updated throughout to keep track of the updated array and the updated element value for whatever index the loop is at. My algorithm is correct because it loops through all possible values to ensure that everything within the array is ordered. Also it is efficient when using an array of less than 100000 integers.
